@@ -1,0 +1,26 @@
+<?php
+class Shape{
+
+}
+
+class Circle extends Shape{
+    function draw()
+    {
+        print "Circle has been drawn.</br>";
+    }
+}
+
+class Triangle extends Shape{
+    function draw()
+    {
+        print "Triangle has been drawn.</br>";
+    }
+}
+
+class Ellipse extends Shape{
+    function draw()
+    {
+        print "Ellipse as been drawn.";
+    }
+}
+?>
