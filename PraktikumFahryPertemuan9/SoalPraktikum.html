@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasir Toko - Butik Cantik</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+            margin: 100px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #EC3202;
+        }
+
+        label,
+        input,
+        select,
+        button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        input,
+        select,
+        button {
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        input,
+        select {
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #ec3203;
+            color: #fff;
+            border: none;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #EC3203;
+        }
+
+        .footer-text {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+        <h2>Kasir Toko Butik Cantik</h2>
+        <form action="login.php" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="level">Level:</label>
+            <select id="level" name="level">
+                <option value="admin">Admin</option>
+                <option value="kasir">Kasir</option>
+            </select>
+
+            <button type="submit">Login</button>
+        </form>
+        <div class="footer-text">
+            www.ButikCantik.com
+        </div>
+    </div>
+    <div class="header">
+        KASIR TOKO BUTIK CANTIK
+    </div>
+
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">Data Kasir</a>
+        <a href="#">Data Supplier</a>
+        <a href="#">Data Barang</a>
+        <a href="#">Pembelian Barang</a>
+        <a href="#">Penjualan Ritel</a>
+        <a href="#">Laporan</a>
+        <a href="#">Logout</a>
+    </div>
+
+    <div class="content">
+        <h2>Point of Sale</h2>
+        <p>PROGRAM PENJUALAN PADA TOKO</p>
+        <p>Anda sudah login dengan User: <strong>Admin</strong>, Nama: <strong>Muhammad Fahry Maulana</strong></p>
+    </div>
+
+</body>
+
+</html>
