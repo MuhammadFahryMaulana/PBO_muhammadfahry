@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #800000;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="c:\Users\PC LAB SI 32\Downloads\es.jpg" alt="alt=" Image height="250px">
+    <h1 style="color: #000080; font-size: 24px;">Selamat Datang di Halaman Beranda</h1>
+    <h1 style="color: #000080; font-size: 24px;">Es Krim Service Bandung</h1>
+    <a href="about.html">Tentang Kami</a>
+    <br><br>
+    <button onclick="bukaBukuTamu()">Buka Buku Tamu</button>
+
+    <table id="tabelBukuTamu">
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>Pesan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data pengunjung akan ditambahkan di sini -->
+        </tbody>
+    </table>
+
+    <script>
+        function bukaBukuTamu() {
+            const nama = prompt("Masukkan nama Anda:");
+            const email = prompt("Masukkan email Anda:");
+            const pesan = prompt("Masukkan pesan Anda:");
+
+            // Simpan data ke variabel
+            const data = {
+                nama: nama,
+                email: email,
+                pesan: pesan
+            };
+
+            // Tampilkan data di console
+            console.log("Nama:", data.nama);
+            console.log("Email:", data.email);
+            console.log("Pesan:", data.pesan);
+
+            // Tambahkan data ke tabel
+            tambahKeTabel(data);
+        }
+
+        function tambahKeTabel(data) {
+            const tabelBody = document.querySelector("#tabelBukuTamu tbody");
+            const row = document.createElement("tr");
+
+            // Buat sel untuk nama, email, dan pesan
+            const selNama = document.createElement("td"); //membuat sel unutk nama
+            selNama.textContent = data.nama; // mengisi sel dgn nama
+
+            const selEmail = document.createElement("td");
+            selEmail.textContent = data.email;
+
+            const selPesan = document.createElement("td");
+            selPesan.textContent = data.pesan;
+
+            // Tambahkan sel ke baris
+            row.appendChild(selNama);
+            row.appendChild(selEmail);
+            row.appendChild(selPesan);
+
+            // Tambahkan baris ke tabel
+            tabelBody.appendChild(row);
+        }
+    </script>
+</body>
+
+</html>
